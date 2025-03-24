@@ -17,7 +17,7 @@ def load_word2vec_model():
 @st.cache_data
 def load_data():
     # Loading preprocessed data
-    df = pd.read_csv("data_2\Airbnb_Data_Preprocessed.csv")  
+    df = pd.read_csv("data_2/Airbnb_Data_Preprocessed.csv")  
     
     # Combining text columns into a single text column
     if 'description_amenities' not in df.columns:
