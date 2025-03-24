@@ -4,44 +4,9 @@ import numpy as np
 from gensim.models import Word2Vec
 from sklearn.metrics.pairwise import cosine_similarity
 import os
-import base64
-
 
 # Setting streamlit app layout
 st.set_page_config(page_title='Accommodation Recommender', page_icon='🏨', layout="wide", initial_sidebar_state="auto")
-
-# function to set up background image
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-def set_png_as_page_bg(png_file):
-    bin_str = get_base64_of_bin_file(png_file) 
-    page_bg_img = '''
-    <style>
-        .stApp {
-            background-image: url("data:image/png;base64,%s");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: scroll;
-        }
-        .stApp::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(255, 255, 255, 0.6);
-            z-index: -1;
-        }
-    </style>
-    ''' % bin_strr
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-
-# Setting background image
-set_png_as_page_bg(r'C:\Users\janen\Documents\Research\Recommendation-system-for-hotel-and-airbnbs\background.jpg')
 
 # Caching the Word2Vec model to avoid reloading
 @st.cache_resource
