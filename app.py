@@ -127,11 +127,18 @@ elif app_mode == "About":
     st.header('🏨Accommodation Recommender In USA')
     st.write('### Project Overview')
     st.write('##### ⚠️This is for learning purposes‼️')
+    st.markdown("""Selecting a hotel or any accommodation has become challenging to many travelers due to the many options available. This is why it is important for property owners to be able to bridge their accommodations with tomorrow’s customers in order to increase the number of bookings as well as keep their guests satisfied. This project focuses on developing a recommendation tool that would recommend places of accommodation based on the user’s preferences with respect to such features as location, price, and amenities. system uses advanced tools and methods, in particular, property details are scanned using machine learning techniques and language processing to give recommendations for the individual. It resolves limitations of the previous systems, one of which is difficulty in making recommendations for unfamiliar users or lack of sufficient information. In view of this, the system, which is aimed at providing an intuitive user interface, is targeted at, and making accurate and effective recommendations, aims at making the search for properties less time consuming which would improve the experience of travelers.""")
+    st.write('### Problem Statement')
     st.markdown("""
-        This project focuses on developing a recommendation tool that suggests accommodations based on user preferences such as location, price, and amenities. 
-        The system uses advanced machine learning and natural language processing techniques to provide personalized recommendations, 
-        addressing the limitations of traditional systems that struggle with unfamiliar users or insufficient data. 
-        The goal is to simplify the search process and enhance the travel experience.
+        Nowadays people who are traveling find it difficult to select the 
+                right hotel or an Airbnb to stay due to their large number of choices available.
+                 This happens because different properties have different features such as location, 
+                budget and amenities or other personal needs. Also, the property owners in these 
+                platforms would want their properties to be matched to the right customers so that the 
+                rate they get booked increases and also to make sure that the customers are satisfied.
+                 Therefore, there is need of a solution that will use the specific features of each 
+                property to match travelers with the best accommodations for them based on their
+                 preferences while also property owners benefiting.
     """)
     st.write('### Objective')
     st.markdown("To develop a feature-based recommendation system for hotels and Airbnbs that matches users with their ideal accommodations.")
