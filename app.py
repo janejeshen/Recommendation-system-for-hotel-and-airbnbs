@@ -41,21 +41,18 @@ def set_png_as_page_bg(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Setting background image
-set_png_as_page_bg(r'C:\Users\janen\Documents\Research\Recommendation-system-for-hotel-and-airbnbs\background.jpg')
+set_png_as_page_bg(r'background.jpg')
 
 # Caching the Word2Vec model to avoid reloading
 @st.cache_resource
 def load_word2vec_model():
-    """
-    Load the pre-trained Word2Vec model.
-    """
     return Word2Vec.load("word2vec.model")
 
 # Caching the preprocessed data to avoid reloading
 @st.cache_data
 def load_data():
     # Loading preprocessed data
-    df = pd.read_csv("data_2/Airbnb_Data_Preprocessed.csv")  # Load the preprocessed data
+    df = pd.read_csv("data_2\Airbnb_Data_Preprocessed.csv")  
     
     # Combining text columns into a single text column
     if 'description_amenities' not in df.columns:
